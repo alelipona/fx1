@@ -1,16 +1,16 @@
-
-let seed = 0; //seed Hash
-let sizee = 0; // rect size
-let col = 0; //color
+const startPoint = {}
 
 
 function setup() {
-  
+  startPoint.x = windowWidth*fxrand()
+  startPoint.y = windowHeight*fxrand()
   createCanvas(windowWidth, windowHeight);
   
   seed=int(fxrand() * 100000000); // FXHASH seed rand
   const test = $fx.getParams().number_id
   console.log('test::: ', test);
+  console.log('x::: ', startPoint.x);
+  console.log('y::: ', startPoint.y);
   randomSeed(seed); 
   
 
@@ -40,5 +40,17 @@ rect(width/2,height/2,sizee,sizee);
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+}
+
+function newPoint(oldPoint){
+  const np = {
+    x:oldPoint.x+fxrand()*
+  }
+}
+function getRandomDelta(){
+  // let d
+if(fxrand()>0.5){
+
+}
 }
 
